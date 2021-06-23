@@ -11,7 +11,6 @@ function ajax(cmd) {
 
     xhr.onload = function () {
         var output = xhr.responseText;
-        document.getElementById("d2").innerHTML = "Command is being Executed..."
         document.getElementById("d2").innerHTML = output;
     }
 
