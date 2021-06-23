@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <script>
-function printer() {
-   var keyword = document.getElementById("i");
+function printer(id) {
+   var keyword = document.getElementById(id);
     return keyword.value
 }
 
@@ -11,4 +11,5 @@ function w(ele){
 </script>
 
 <input id="i" type="text" name="x"/>
-<button type="button" onClick="w(printer());" >Submit</button>
+<input id="j" type="text" name="y"/>
+<button type="button" onClick="w(printer('i')+printer('j'));" >Submit</button>

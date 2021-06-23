@@ -9,61 +9,91 @@
     <span></span>
     <span></span>
     <span></span>
-    Show Containers
-    <button type="submit" onclick="ajax('sudo docker ps -a');" >>></button> 
+    Docker Version
+    <button class="button" type="submit" onclick="ajax('sudo docker --version');" >Run</button> 
 </a>
+
+<a href="#" >
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    Show Containers
+    <button class="button" type="submit" onclick="ajax('sudo docker ps -a');" >Run</button> 
+</a>
+<br/>
 <a href="#">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
     Show Images
+    <button class="button" onclick="ajax('sudo docker images');" >Run</button>
 </a>
 <a href="#">
-    <input name="x" placeholder="Image:tag"/>
     <span></span>
     <span></span>
     <span></span>
     <span></span>
-    Pull Image
-    <button onclick="ajax();">>></button>  
+    Pull Image<br/>
+    <input id="x" name="x" placeholder="Image:tag"/>
+    
+    <button class="button"  onclick="ajax('sudo docker pull ' + printer('x'));">Run</button>  
 </a><br/>
 
 <a href="#">
-    <input name="osName" placeholder="OS Name"/><br/>
-    <input name="imageName" placeholder="Image:tag"/>
     <span></span>
     <span></span>
     <span></span>
     <span></span>
-    Docker Run
-    <button onclick="alert('hello');">>></button> 
+    Docker Run<br/>
+    <input id="osName" name="osName" placeholder="Conatainer Name"/>
+    <input id="imageName" name="imageName" placeholder="Image:tag"/>
+    
+    
+    <button class="button"  onclick="ajax('sudo docker run -dit --name '+ printer('osName') + ' ' + printer('imageName'));">Run</button> 
+</a>
+<br/>
+
+<a href="#">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    Start Container<br/>
+    <input id="start" name="start" placeholder="Name | ID "/>
+    
+    <button class="button"  onclick="ajax('sudo docker start ' + printer('start'));">Run</button>
 </a>
 
 <a href="#">
-    <input name="delete" placeholder="Name | ID | 'all'"/>
     <span></span>
     <span></span>
     <span></span>
     <span></span>
-    Delete Containers
-    <button onclick="alert('hello');">>></button>
+    Delete Containers<br/>
+    <input id="delete" name="delete" placeholder="Name | ID | 'all'"/>
+    
+    <button class="button"  onclick="ajax('sudo docker rm -f ' + printer('delete'));">Run</button>
 </a>
+<br/>
 
 <a href="#">
-    <input name="start" placeholder="Name | ID "/>
     <span></span>
     <span></span>
     <span></span>
     <span></span>
-    Start Container
-    <button onclick="alert('hello');">>></button>
+    Execute Command<br/>
+    <input id="cname" name="cname" placeholder="Container Name"/>
+    <input id="command" name="command" placeholder="Command "/>
+    
+    <button class="button"  onclick="ajax('sudo docker exec ' + printer('cname') + ' ' + printer('command'));">Run</button>
 </a>
-
 
 </div>
-
+<pre>
 <div id="d2" class="split right">
-    Hello
+   <h1><center>Hello, This is output area.</center></h1>
+   
 </div>
-
+</pre>

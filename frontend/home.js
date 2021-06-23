@@ -1,9 +1,9 @@
 function ajax(cmd) {
-    
+    document.getElementById("d2").innerHTML = "Command is being Executed, Please wait..."
     var xhr = new XMLHttpRequest();
 
 
-    xhr.open("GET", "http://192.168.72.126/cgi-bin/docker.py?x="+cmd, true);
+    xhr.open("GET", "http://192.168.118.126/cgi-bin/docker.py?command="+cmd, true);
 
     xhr.send();
 
@@ -11,17 +11,15 @@ function ajax(cmd) {
 
     xhr.onload = function () {
         var output = xhr.responseText;
+        document.getElementById("d2").innerHTML = "Command is being Executed..."
         document.getElementById("d2").innerHTML = output;
     }
 
 
 }
 
-function printer() {
-    var keyword = document.getElementById("myEmail");
-    return keyword;
+function printer(id) {
+    var keyword = document.getElementById(id);
+    return keyword.value;
 }
 
-function box() {
-    document.getElementById("d2").innerHTML = "bye";
-}
