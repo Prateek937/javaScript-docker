@@ -25,6 +25,7 @@ a{
     letter-spacing: 4px;
     overflow: hidden;
     margin-right: 50px;
+    padding-top: 40px;  
    
 }
 a:hover{
@@ -111,18 +112,17 @@ a span:nth-child(4){
     }
 }
 
-
 .split {
-    height: 100%;
+    height: 100vh;
     width: 50%;
     position: fixed;
     z-index: 1;
-    top: 0;
+    top: 100px;
     overflow-x: hidden;
-    padding-top: 20px;
+
     
   }
-  
+
   /* Control the left side */
   .left {
     left: 0;
@@ -138,6 +138,7 @@ a span:nth-child(4){
   div#d2 {
     color:rgb(35, 224, 114); 
     padding: 15px;
+    
 } 
 body#body1{
     color:#f4511e;

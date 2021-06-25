@@ -1,0 +1,106 @@
+<head>
+<style>
+.navbar {
+    background-color:navy;
+        position: fixed;
+    left: 0;
+    right: 0;
+    top: 10px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 0 25px 0 grey;
+}
+.navbar *{
+    display: inline-flex;
+}
+.navbar div {
+float: left;
+font-size: 25px;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+.dropdown {
+float: left;
+overflow: hidden;
+}
+.dropdown .dropbtn {
+font-size: 25px;  
+border: none;
+outline: none;
+color: white;
+padding: 14px 16px;
+background-color: inherit;
+font-family: inherit;
+margin: 0;
+}
+.navbar a:hover, .dropdown:hover .dropbtn {
+background-color:rgb(1, 6, 8);
+}
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+.dropdown-content a {
+float: none;
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+.dropdown-content a:hover {
+background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+display: block;
+}
+ul{
+    margin-left: 200px;
+}
+</style>
+</head>
+
+<div class="navbar">
+    <ul>
+    <a href="home.html">Docker GUI</a>
+    <a href="71j5ZGBVo2L.AC_UL600_SR600,600.jpg">Docker CLI</a>
+    <a class="dropdown">
+        <button class="dropbtn">Docker Products 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="https://www.docker.com/products/docker-hub">Docker Hub</a>
+          <a href="https://www.docker.com/products/docker-desktop">Docker Desktop</a>
+        </div>
+    </a>
+    <a class="dropdown">
+      <button class="dropbtn">Docker Support 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="https://docs.docker.com/">Docker Documentation</a>
+        <a href="https://docs.docker.com/engine/reference/builder/">DockerFile</a>
+        <a href="https://phoenixnap.com/kb/list-of-docker-commands-cheat-sheet">Docker Cheat Sheet</a>
+        <a href="https://www.youtube.com/watch?v=NPgXHA41-YM&list=PLIZi9I-myrnca9-ge_4Eg75Z3F_ZmodUX">Docker Tutorials</a>
+      </div>
+    </a> 
+    <a class="dropdown">
+        <button class="dropbtn">Blog 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="https://wordpress.com/read/feeds/117927692/posts/3366562756">Machine Learning with Docker</a>
+          <a href="https://www.linkedin.com/pulse/setting-up-python-interpreter-running-code-docker-container-singh-2c">Python with Docker</a>
+          <a href="https://www.linkedin.com/pulse/configuring-httpd-server-docker-container-gautam-singh">Webserver in Docker</a>
+        </div>
+    </a>
+    <a href="Contacts.html">About us</a>
+</ul>
+  </div>
